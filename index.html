@@ -69,6 +69,7 @@
             camera.attachControl(canvas, true);
             camera.upperRadiusLimit = 8;
             camera.lowerRadiusLimit = 8;
+            camera.panningDistanceLimit=1;
 
             new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 0, 1));
             new BABYLON.HemisphericLight("light", new BABYLON.Vector3(-0.94, 0, -0.33));
