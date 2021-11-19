@@ -67,8 +67,8 @@
 
             const camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 1.5, Math.PI / 2.5, 8, new BABYLON.Vector3(1, 0.8, 1));
             camera.attachControl(canvas, true);
-            // camera.upperRadiusLimit = 7;
-            // camera.lowerRadiusLimit = 7;
+            camera.upperRadiusLimit = 8;
+            camera.lowerRadiusLimit = 8;
 
             new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 0, 1));
             new BABYLON.HemisphericLight("light", new BABYLON.Vector3(-0.94, 0, -0.33));
