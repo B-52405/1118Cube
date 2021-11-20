@@ -113,10 +113,14 @@
                 faceColors[0] = position[2] == 2 ? colors[5] : colors[6];
 
                 let block = new BABYLON.MeshBuilder.CreateBox(index,
-                    { faceColors: faceColors, width: 0.6, height: 0.6, depth: 0.6 }, scene);
+                    { faceColors: faceColors, width: 0.6, height: 0.6, depth: 0.6 });
 
                 let realPosition = blockPosition[index];
                 block.position = new BABYLON.Vector3(realPosition[0], realPosition[1], realPosition[2]);
+
+                block.renderOutline=true;
+                block.outlineColor=new BABYLON.Color3(1,1,1);
+                block.outlineWidth=0.01;
 
                 return block;
             }
